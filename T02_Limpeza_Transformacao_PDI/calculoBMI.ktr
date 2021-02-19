@@ -430,7 +430,7 @@
     <created_date>2021/02/16 00:54:22.054</created_date>
     <modified_user>-</modified_user>
     <modified_date>2021/02/16 00:54:22.054</modified_date>
-    <key_for_session_key/>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -447,6 +447,63 @@
       <enabled>Y</enabled>
     </hop>
   </order>
+  <step>
+    <name>Formula</name>
+    <type>Formula</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <formula>
+      <field_name>A1C</field_name>
+      <formula_string>(ABS([Blood Sugar__])+46.7)/28.7</formula_string>
+      <value_type>Number</value_type>
+      <value_length>-1</value_length>
+      <value_precision>2</value_precision>
+      <replace_field>A1C</replace_field>
+    </formula>
+    <formula>
+      <field_name>BMI</field_name>
+      <formula_string>[Weight__]/([Height__]*[Height__])</formula_string>
+      <value_type>Number</value_type>
+      <value_length>-1</value_length>
+      <value_precision>2</value_precision>
+      <replace_field>BMI</replace_field>
+    </formula>
+    <formula>
+      <field_name>Preg_Ordinal</field_name>
+      <formula_string>if([Pregnancies]=0;"NENHUMA";if(and([Pregnancies]&gt;=1;[Pregnancies]&lt;=2);"BAIXO";if(and([Pregnancies]&gt;=3;[Pregnancies]&lt;=5);"MÉDIA";if(and([Pregnancies]&gt;=6;[Pregnancies]&lt;=9);"ALTA"))))</formula_string>
+      <value_type>String</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <replace_field>Preg_Ordinal</replace_field>
+    </formula>
+    <formula>
+      <field_name>Age_Ordinal</field_name>
+      <formula_string>if(and([age]&gt;=20;[age]&lt;=24);"JOVEM";if(and([age]&gt;=25;[age]&lt;=40);"ADULTO JOVEM";if(and([age]&gt;=41;[age]&lt;=59);"ADULTO";if(and([age]&gt;=60;[age]&lt;=70);"IDOSO"))))</formula_string>
+      <value_type>String</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <replace_field>Age_Ordinal</replace_field>
+    </formula>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>352</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>entradaDados</name>
     <type>ExcelInput</type>
@@ -474,7 +531,7 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>C:\Users\danieltorresdev\Documents\Workspaces\WorkspaceResidenciaIMD\IMD0178_TOPICOS_ESPECIAIS_DESENVOLVIMENTO_SOFTWARE_1\T02_Limpeza_Transformação_PDI\DiabetesValoresAjustados.xls.xls</name>
+      <name>C:\Users\danieltorresdev\Desktop\apresentação\T02_Limpeza_Transformacao_PDI\DiabetesValoresAjustados.xls.xls</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -655,63 +712,6 @@
     </GUI>
   </step>
   <step>
-    <name>Formula</name>
-    <type>Formula</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <formula>
-      <field_name>A1C</field_name>
-      <formula_string>(ABS([Blood Sugar__])+46.7)/28.7</formula_string>
-      <value_type>Number</value_type>
-      <value_length>-1</value_length>
-      <value_precision>2</value_precision>
-      <replace_field>A1C</replace_field>
-    </formula>
-    <formula>
-      <field_name>BMI</field_name>
-      <formula_string>[Weight__]/([Height__]*[Height__])</formula_string>
-      <value_type>Number</value_type>
-      <value_length>-1</value_length>
-      <value_precision>2</value_precision>
-      <replace_field>BMI</replace_field>
-    </formula>
-    <formula>
-      <field_name>Preg_Ordinal</field_name>
-      <formula_string>if([Pregnancies]=0;"NENHUMA";if(and([Pregnancies]&gt;=1;[Pregnancies]&lt;=2);"BAIXO";if(and([Pregnancies]&gt;=3;[Pregnancies]&lt;=5);"MÉDIA";if(and([Pregnancies]&gt;=6;[Pregnancies]&lt;=9);"ALTA"))))</formula_string>
-      <value_type>String</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <replace_field>Preg_Ordinal</replace_field>
-    </formula>
-    <formula>
-      <field_name>Age_Ordinal</field_name>
-      <formula_string>if(and([age]&gt;=20;[age]&lt;=24);"JOVEM";if(and([age]&gt;=25;[age]&lt;=40);"ADULTO JOVEM";if(and([age]&gt;=41;[age]&lt;=59);"ADULTO";if(and([age]&gt;=60;[age]&lt;=70);"IDOSO"))))</formula_string>
-      <value_type>String</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <replace_field>Age_Ordinal</replace_field>
-    </formula>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>352</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>saidaDados</name>
     <type>ExcelOutput</type>
     <description/>
@@ -728,7 +728,7 @@
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:\Users\danieltorresdev\Documents\Workspaces\WorkspaceResidenciaIMD\IMD0178_TOPICOS_ESPECIAIS_DESENVOLVIMENTO_SOFTWARE_1\T02_Limpeza_Transformação_PDI\DiabetesFinal.xls</name>
+      <name>C:\Users\danieltorresdev\Desktop\apresentação\T02_Limpeza_Transformacao_PDI\DiabetesFinal.xls</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>

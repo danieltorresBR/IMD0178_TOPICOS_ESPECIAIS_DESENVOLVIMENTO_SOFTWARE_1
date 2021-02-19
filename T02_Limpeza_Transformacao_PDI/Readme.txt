@@ -1,10 +1,18 @@
-<h2> Ordem das transformações:
+ALUNOS:
+
+DANIEL LUCAS CABRAL BESERRA
+DANIEL TEODOLINO BARBOSA TORRES
+MÁRCIA SOARES MARQUES
+
+===========
+
+Ordem das transformações:
 
 1 - transformacaoMissingValues.ktr
 2 - transformacaoAjusteValores.ktr
 3 - calculoBMI.ktr
 
-Seguia essa ordem e lembre de modificar/atualizar o local para salvar o arquivo resultante. <\h2>
+Seguia essa ordem e lembre de modificar/atualizar o local para salvar o arquivo resultante.
 
 ============
 
